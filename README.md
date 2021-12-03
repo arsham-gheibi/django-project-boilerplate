@@ -47,7 +47,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Then Go ahead and make your Project
+Then Go ahead and make your Django App
 
 ```sh
 python manage.py startapp <app_name>
