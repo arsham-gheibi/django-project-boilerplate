@@ -1,4 +1,4 @@
-## Django Project Boilerplate
+## Django Project Boilerplate 🎁
 
 a Simple Django Boilerplate to Starting your django Projects EZ as 🥧
 
@@ -15,6 +15,11 @@ a Simple Django Boilerplate to Starting your django Projects EZ as 🥧
 ```sh
 git clone https://github.com/SeelpAydin/django-project-boilerplate.git
 cd django-project-boilerplate
+```
+
+Make a New Virtual Environment
+
+```sh
 python -m venv env
 source env/bin/activate
 python -m pip install -r requirements.txt
@@ -26,18 +31,26 @@ make a .env file and Put your Credentials on that file
 touch app/.env
 ```
 
-The Credentials are :
+## The Credentials are :
 
-ENVIROMENT=
-SECRET_KEY=
-DOMAIN=
-DB_NAME=
-DB_USER=
-DB_PASSWORD=
-DB_HOST=
-DB_PORT=
+1. ENVIROMENT (production or development)
+2. SECRET_KEY
+3. DOMAIN
+4. DB_NAME
+5. DB_USER
+6. DB_PASSWORD
+7. DB_HOST
+8. DB_PORT
 
 ```sh
 python manage.py migrate
 python manage.py runserver
 ```
+
+Then Go ahead and make your Project
+
+```sh
+python manage.py startapp <app_name>
+```
+
+Happy Coding 🥳
