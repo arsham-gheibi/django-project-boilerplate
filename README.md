@@ -31,7 +31,7 @@ make a .env file and Put your Credentials on that file
 touch app/.env
 ```
 
-## The Credentials are :
+## The Credentials
 
 1. ENVIROMENT (production or development)
 2. SECRET_KEY
