@@ -216,4 +216,8 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,django
 
+!core/migrations/__init__.py
+core/migrations/*
 staticfiles
+mediafiles
+out/
