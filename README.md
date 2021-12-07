@@ -7,7 +7,7 @@ a Simple Django Boilerplate to Starting your django Projects EZ as 🥧
 1. Settings for Both Production and Development Environments
 2. Pre Configured Security Settings
 3. Pre Configured .env Settings
-4. Minimal requiremnts for Any Django Project
+4. Minimal requirements for Any Django Project
 5. Flake8 for Code Quality
 6. Gitignore for Git
 7. Clean and Ready to use for your Project
@@ -31,7 +31,7 @@ make a .env file and Put your Credentials on that file
 touch app/.env
 ```
 
-## The Credentials are :
+## The Credentials
 
 1. ENVIROMENT (production or development)
 2. SECRET_KEY
@@ -47,7 +47,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Then Go ahead and make your Project
+Then Go ahead and make your Django App
 
 ```sh
 python manage.py startapp <app_name>
