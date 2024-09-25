@@ -30,7 +30,6 @@ class AdminSiteTest(TestCase):
         res = self.client.get(url)
 
         self.assertEqual(res.status_code, 200)
-
         self.assertContains(res, self.user.name)
         self.assertContains(res, self.user.email)
 
