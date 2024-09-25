@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "app"
+version = "1.0.0"
+description = "application"
+authors = ["Arsham Gheibi <arshamgheibii@gmail.com>"]
+license = "LICENSE"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.12.6"
+
+# Web Framework
+Django = "^4.2"
+djangorestframework = "^3.15"
+
+# Database
+psycopg = "^3.2"
+
+# Documentation
+drf-spectacular = "^0.27"
+
+# Deployment
+uWSGI = "^2.0"
+
+[tool.poetry.group.dev.dependencies]
+# Linting and Code Quality
+flake8 = "^7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
