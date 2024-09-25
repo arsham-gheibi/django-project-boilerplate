@@ -1,56 +1,58 @@
 ## Django Project Boilerplate 🎁
 
-a Simple Django Boilerplate to Starting your django Projects EZ as 🥧
+Essential 🐳 Django Boilerplate files to start your Django Projects EZ as 🥧
 
-## What Does this Django Project Boilerplate Includes ?
+## What Does this Django Project Boilerplate Includes?
 
-1. Settings for Both Production and Development Environments
+1. Dockerized Settings for Both Production and Development Environments
 2. Pre Configured Security Settings
-3. Pre Configured .env Settings
-4. Minimal requirements for Any Django Project
-5. Flake8 for Code Quality
-6. Gitignore for Git
-7. Clean and Ready to use for your Project
+3. Pre Configured Unittests
+4. Pre Configured .env Settings
+5. Minimal requirements for Any Django Project
+6. Flake8 for Code Quality
+7. Gitignore for Git
+8. Clean and Ready to use for your Project
 
 ```sh
-git clone https://github.com/SeelpAydin/django-project-boilerplate.git
+git clone https://github.com/arsham-gheibi/django-project-boilerplate.git
 cd django-project-boilerplate
 ```
 
-Make a New Virtual Environment
+Make a New Virtual Environment and install requirements with poetry.
 
 ```sh
 python -m venv env
 source env/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install poetry
+poetry install --no-root
 ```
 
-make a .env file and Put your Credentials on that file
+make a .env file and put your Credentials on that file.
 
 ```sh
-touch app/.env
+cp .env.sample .env
 ```
 
 ## The Credentials
 
-1. ENVIROMENT (production or development)
-2. SECRET_KEY
-3. DOMAIN
-4. DB_NAME
-5. DB_USER
-6. DB_PASSWORD
-7. DB_HOST
-8. DB_PORT
-
-```sh
-python manage.py migrate
-python manage.py runserver
-```
+1. DJANGO_SECRET_KEY
+2. DJANGO_ALLOWED_HOSTS
+3. DB_NAME
+4. DB_USER
+5. DB_PASSWORD
+6. DB_HOST
+7. DB_PORT
 
 Then Go ahead and make your Django App
 
 ```sh
-python manage.py startapp <app_name>
+docker compose run --rm app sh -c 'python manage.py startapp <app_name>'
+```
+
+To run tests (code style and Unit Tests), run the following:
+
+```sh
+docker compose run --rm app sh -c 'python manage.py wait_for_db && python manage.py tests && flake8'
 ```
 
 Happy Coding 🥳
