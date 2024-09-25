@@ -1,9 +1,0 @@
-[flake8]
-
-exclude =
-    env,
-    migrations,
-    __init__.py,
-    manage.py,
-    settings.py,
-    apps.py,
